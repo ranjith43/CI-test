@@ -11,12 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2     
       
-      # Add your build steps here
       - name: Build Application
         run: |
-          # Your build commands here
+          echo " Starting the Build"
 
   deploy:
     name: Deploy
@@ -25,11 +24,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      # Add your deployment steps here
+     
       - name: Deploy Application
         run: |
-          # Your deployment commands here
+          echo " Starting the Deploy"
 
   test:
     name: Test
@@ -38,8 +36,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      # Add your test steps here
+    
       - name: Run Tests
         run: |
-          # Your test commands here
+          echo " Starting the Test"
